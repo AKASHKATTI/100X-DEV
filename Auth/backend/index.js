@@ -6,6 +6,13 @@ const app = express();
 const connectDB = require("./db");
 const AuthRoutes = require("./routes/Auth.routes");
 
+
+const cors = require("cors");
+
+app.use(cors({
+  origin: "http://localhost:5173" // or 3000
+}));
+
 // Connect to Database
 connectDB();
 
